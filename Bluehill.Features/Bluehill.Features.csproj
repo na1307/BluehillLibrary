@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net2.0;net3.5;net4.0-client;net4.7.1;net6.0;net7.0</TargetFrameworks>
+    <RootNamespace>Bluehill</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>na1307</Authors>
+    <Company>Bluehill</Company>
+    <Copyright>Copyright © Bluehill 2022</Copyright>
+    <AssemblyVersion>0</AssemblyVersion>
+    <FileVersion>0.0.0</FileVersion>
+    <Version>0.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/na1307/$(AssemblyName)</RepositoryUrl>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net3.5-client' or '$(TargetFramework)' == 'net4.0-client'">
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Remove="System.Linq" />
+    <Using Remove="System.Net.Http" />
+    <Using Remove="System.Threading.Tasks" />
+  </ItemGroup>
+</Project>
