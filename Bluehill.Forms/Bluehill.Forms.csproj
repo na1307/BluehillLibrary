@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFrameworks>net2.0;net3.5;net4.0-client;net4.5;net6.0-windows;</TargetFrameworks>
+    <TargetFrameworks>net2.0;net4.0-client;net4.5;net6.0-windows;</TargetFrameworks>
     <RootNamespace>Bluehill</RootNamespace>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -11,8 +11,8 @@
     <Company>Bluehill</Company>
     <Copyright>Copyright © Bluehill 2022</Copyright>
     <AssemblyVersion>0</AssemblyVersion>
-    <FileVersion>0.0.0</FileVersion>
-    <Version>0.0</Version>
+    <FileVersion>0.1.0</FileVersion>
+    <Version>0.1</Version>
     <UseWindowsForms>true</UseWindowsForms>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/na1307/$(AssemblyName)</RepositoryUrl>
@@ -29,6 +29,6 @@
     <Using Remove="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Bluehill.Features" Version="0.0.0" />
+    <PackageReference Include="Bluehill.Features" Version="0.1.0" />
   </ItemGroup>
 </Project>

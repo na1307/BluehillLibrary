@@ -12,33 +12,26 @@ public class Dialog : Form {
     private System.ComponentModel.IContainer components = null;
 
 #nullable enable
-    public Dialog() => InitializeComponent();
+    protected Dialog() => InitializeComponent();
 
-    protected sealed override void OnSizeChanged(EventArgs e) {
-        base.OnSizeChanged(e);
+    protected override void OnLayout(LayoutEventArgs levent) {
+        base.OnLayout(levent);
+
         const int s =
 #if NET45_OR_GREATER || !NETFRAMEWORK
     10
 #else
-    0
+0
 #endif
-    ;
+;
         const int w = 190 + s;
         const int h = 70 + s;
 
         tableLayoutPanel1.Location = new(Size.Width - w, Size.Height - h);
     }
 
-    protected virtual void OK_Button_Click(object sender, EventArgs e) {
-        DialogResult = DialogResult.OK;
-        Close();
-    }
-
-    protected virtual void Cancel_Button_Click(object sender, EventArgs e) {
-        DialogResult = DialogResult.Cancel;
-        Close();
-    }
-
+    protected virtual void OK_Button_Click(object sender, EventArgs e) => DialogResult = DialogResult.OK;
+    protected virtual void Cancel_Button_Click(object sender, EventArgs e) => DialogResult = DialogResult.Cancel;
     protected void HideOKButton() => okButton.Hide();
 #nullable disable
 

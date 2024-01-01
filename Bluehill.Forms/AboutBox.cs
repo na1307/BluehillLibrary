@@ -4,14 +4,14 @@ using static Bluehill.AssemblyProperties;
 namespace Bluehill;
 
 public sealed class AboutBox : Form {
-    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
-    private System.Windows.Forms.PictureBox logoPictureBox;
-    private System.Windows.Forms.Label labelProductName;
-    private System.Windows.Forms.Label labelVersion;
-    private System.Windows.Forms.Label labelCopyright;
-    private System.Windows.Forms.Label labelCompanyName;
-    private System.Windows.Forms.TextBox textBoxDescription;
-    private System.Windows.Forms.Button okButton;
+    private TableLayoutPanel tableLayoutPanel;
+    private PictureBox logoPictureBox;
+    private Label labelProductName;
+    private Label labelVersion;
+    private Label labelCopyright;
+    private Label labelCompanyName;
+    private TextBox textBoxDescription;
+    private Button okButton;
 
     /// <summary>
     /// Required designer variable.
@@ -21,7 +21,7 @@ public sealed class AboutBox : Form {
 #nullable enable
     public AboutBox() : this(null) { }
 
-    public AboutBox(Image? image) {
+    public AboutBox(Image? logo) {
         InitializeComponent();
         Text = string.Format(Strings.AboutText, AssemblyTitle);
         labelProductName.Text = AssemblyProduct;
@@ -29,8 +29,7 @@ public sealed class AboutBox : Form {
         labelCopyright.Text = AssemblyCopyright;
         labelCompanyName.Text = AssemblyCompany;
         textBoxDescription.Text = AssemblyDescription;
-        if (image != null) logoPictureBox.Image = image;
-        okButton.Click += (_, _) => Close();
+        if (logo != null) logoPictureBox.Image = logo;
     }
 #nullable disable
 
