@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFrameworks>net3.5;net4.0-client;net6.0-windows;</TargetFrameworks>
+    <TargetFrameworks>net3.0;net4.0-client;net6.0-windows;</TargetFrameworks>
     <RootNamespace>Bluehill</RootNamespace>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -9,7 +9,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>na1307</Authors>
     <Company>Bluehill</Company>
-    <Copyright>Copyright © Bluehill 2022</Copyright>
+    <Copyright>Copyright © Bluehill 2024</Copyright>
     <AssemblyVersion>0</AssemblyVersion>
     <FileVersion>0.0.0</FileVersion>
     <Version>0.0</Version>
@@ -27,6 +27,6 @@
     <Using Remove="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Bluehill.Features" Version="0.0.0" />
+    <PackageReference Include="Bluehill.Features" Version="0.1.0" />
   </ItemGroup>
 </Project>
