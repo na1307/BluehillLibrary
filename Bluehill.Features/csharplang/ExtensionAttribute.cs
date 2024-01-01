@@ -1,6 +1,6 @@
-﻿#if NETFRAMEWORK && !NET35_OR_GREATER
+﻿#if !NET35_OR_GREATER && !NETSTANDARD1_0_OR_GREATER && !NETCOREAPP1_0_OR_GREATER
 namespace System.Runtime.CompilerServices;
 
 [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class | AttributeTargets.Assembly)]
-public sealed class ExtensionAttribute : Attribute { }
+internal sealed class ExtensionAttribute : Attribute { }
 #endif
