@@ -9,10 +9,10 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>na1307</Authors>
     <Company>Bluehill</Company>
-    <Copyright>Copyright © Bluehill 2022</Copyright>
+    <Copyright>Copyright © Bluehill 2024</Copyright>
     <AssemblyVersion>0</AssemblyVersion>
-    <FileVersion>0.1.0</FileVersion>
-    <Version>0.1</Version>
+    <FileVersion>0.1.1</FileVersion>
+    <Version>0.1.1</Version>
     <UseWindowsForms>true</UseWindowsForms>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/na1307/$(AssemblyName)</RepositoryUrl>
