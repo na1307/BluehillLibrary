@@ -16,18 +16,7 @@ public class Dialog : Form {
 
     protected override void OnLayout(LayoutEventArgs levent) {
         base.OnLayout(levent);
-
-        const int s =
-#if NET45_OR_GREATER || !NETFRAMEWORK
-    10
-#else
-0
-#endif
-;
-        const int w = 190 + s;
-        const int h = 70 + s;
-
-        tableLayoutPanel1.Location = new(Size.Width - w, Size.Height - h);
+        tableLayoutPanel1.Location = new(Size.Width - 190, Size.Height - 70);
     }
 
     protected virtual void OK_Button_Click(object sender, EventArgs e) => DialogResult = DialogResult.OK;
