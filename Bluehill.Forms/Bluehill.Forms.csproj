@@ -29,6 +29,6 @@
     <Using Remove="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Bluehill.Features" Version="0.3.0" />
+    <ProjectReference Include="..\Bluehill.Features\Bluehill.Features.csproj" />
   </ItemGroup>
 </Project>
