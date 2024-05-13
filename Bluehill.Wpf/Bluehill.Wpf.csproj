@@ -1,30 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <TargetFrameworks>net30;net40;net6.0-windows;</TargetFrameworks>
-    <RootNamespace>Bluehill</RootNamespace>
-    <LangVersion>latest</LangVersion>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <WarningsAsErrors>Nullable</WarningsAsErrors>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Authors>na1307</Authors>
-    <Company>Bluehill</Company>
-    <Copyright>Copyright © Bluehill 2024</Copyright>
-    <AssemblyVersion>0</AssemblyVersion>
-    <FileVersion>0.1.0</FileVersion>
-    <Version>0.1</Version>
     <UseWPF>true</UseWPF>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/na1307/$(AssemblyName)</RepositoryUrl>
-    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-    <EnableNETAnalyzers>True</EnableNETAnalyzers>
-    <AnalysisLevel>latest</AnalysisLevel>
   </PropertyGroup>
   <ItemGroup>
     <Using Include="System.Windows" />
-    <Using Remove="System.Linq" />
-    <Using Remove="System.Net.Http" />
-    <Using Remove="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bluehill.Features\Bluehill.Features.csproj" />

@@ -1,33 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <TargetFrameworks>net20;net40;net6.0-windows;</TargetFrameworks>
-    <RootNamespace>Bluehill</RootNamespace>
-    <LangVersion>latest</LangVersion>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <WarningsAsErrors>Nullable</WarningsAsErrors>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Authors>na1307</Authors>
-    <Company>Bluehill</Company>
-    <Copyright>Copyright © Bluehill 2024</Copyright>
-    <AssemblyVersion>0</AssemblyVersion>
-    <FileVersion>0.3.0</FileVersion>
-    <Version>0.3</Version>
     <UseWindowsForms>true</UseWindowsForms>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/na1307/$(AssemblyName)</RepositoryUrl>
-    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-    <EnableNETAnalyzers>True</EnableNETAnalyzers>
-    <AnalysisLevel>latest</AnalysisLevel>
   </PropertyGroup>
-  <ItemGroup Condition="'$(UseWindowsForms)' == 'true' and '$(TargetFramework)' == 'net20'">
-    <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
-  <ItemGroup>
-    <Using Remove="System.Linq" />
-    <Using Remove="System.Net.Http" />
-    <Using Remove="System.Threading.Tasks" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bluehill.Features\Bluehill.Features.csproj" />
   </ItemGroup>
