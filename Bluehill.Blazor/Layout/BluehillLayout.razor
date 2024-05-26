@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <main>
+        <div class="flex-wrapper">
+            <div class="top-row px-4">
+                @foreach (var link in HeadLinks) {
+                    <NavLink href="@link.Path">@link.Text</NavLink>
+                }
+            </div>
+
+            <article class="content px-4">
+                @Body
+            </article>
+
+            <div class="bottom-row px-4">
+                Copyright © Bluehill 2024
+            </div>
+        </div>
+    </main>
+</div>
+
+@code {
+    protected abstract IEnumerable<HeadLink> HeadLinks { get; }
+}
