@@ -1,6 +1,6 @@
-﻿namespace Bluehill;
+﻿namespace Bluehill.Forms;
 
-public static class ErrDialogForms {
+public static class ErrDialog {
     public static void ErrMsg(string message, bool exit) {
         ErrMsg(message);
 

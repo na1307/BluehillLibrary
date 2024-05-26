@@ -6,7 +6,4 @@
   <ItemGroup>
     <Using Include="System.Windows" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bluehill.Features\Bluehill.Features.csproj" />
-  </ItemGroup>
 </Project>

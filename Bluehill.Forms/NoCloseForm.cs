@@ -1,4 +1,4 @@
-﻿namespace Bluehill;
+﻿namespace Bluehill.Forms;
 
 public class NoCloseForm : Form {
     protected override CreateParams CreateParams {

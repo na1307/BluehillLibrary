@@ -1,9 +1,12 @@
-﻿namespace Bluehill;
+﻿namespace Bluehill.Wpf;
 
-public static class ErrDialogWpf {
+public static class ErrDialog {
     public static void ErrMsg(string message, bool exit) {
         ErrMsg(message);
-        if (exit) Application.Current.Shutdown(1);
+
+        if (exit) {
+            Application.Current.Shutdown(1);
+        }
     }
 
     public static MessageBoxResult ErrMsg(string message) => ErrMsg(message, MessageBoxButton.OK);

@@ -3,6 +3,9 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
+    <PackageVersion Include="Microsoft.AspNetCore.Components.Web" Version="8.0.5" />
+  </ItemGroup>
+  <ItemGroup>
     <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.4" />
   </ItemGroup>
 </Project>

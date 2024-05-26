@@ -1,10 +1,9 @@
 <Project>
   <PropertyGroup>
-    <RootNamespace>Bluehill</RootNamespace>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <AssemblyVersion>0</AssemblyVersion>
-    <FileVersion>0.4.0</FileVersion>
-    <Version>0.4</Version>
+    <FileVersion>0.5.0</FileVersion>
+    <Version>0.5</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/na1307/BluehillLibrary</RepositoryUrl>
   </PropertyGroup>
