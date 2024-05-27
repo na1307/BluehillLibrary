@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+
+<BluehillLayout HeadLinks="@HeadLinks">
+    <BeforeHeadLinks>
+        <CultureSelector />
+        @BeforeHeadLinks
+    </BeforeHeadLinks>
+    <Body>
+        @Body
+    </Body>
+    <AfterHeadLinks>
+        @AfterHeadLinks
+    </AfterHeadLinks>
+</BluehillLayout>
+
+@code {
+    [Parameter]
+    public RenderFragment? BeforeHeadLinks { get; set; }
+
+    [Parameter]
+    public IEnumerable<HeadLink> HeadLinks { get; set; } = Array.Empty<HeadLink>();
+
+    [Parameter]
+    public RenderFragment? AfterHeadLinks { get; set; }
+}

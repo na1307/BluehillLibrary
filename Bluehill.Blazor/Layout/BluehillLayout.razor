@@ -4,9 +4,11 @@
     <main>
         <div class="flex-wrapper">
             <div class="top-row px-4">
+                @BeforeHeadLinks
                 @foreach (var link in HeadLinks) {
                     <NavLink href="@link.Path">@link.Text</NavLink>
                 }
+                @AfterHeadLinks
             </div>
 
             <article class="content px-4">
@@ -21,5 +23,12 @@
 </div>
 
 @code {
-    protected abstract IEnumerable<HeadLink> HeadLinks { get; }
+    [Parameter]
+    public RenderFragment? BeforeHeadLinks { get; set; }
+
+    [Parameter]
+    public IEnumerable<HeadLink> HeadLinks { get; set; } = Array.Empty<HeadLink>();
+
+    [Parameter]
+    public RenderFragment? AfterHeadLinks { get; set; }
 }
