@@ -2,8 +2,8 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <StaticWebAssetBasePath Condition="$(StaticWebAssetBasePath) == ''">/</StaticWebAssetBasePath>
-    <FileVersion>0.5.1-beta.0</FileVersion>
-    <Version>0.5.1-beta.0</Version>
+    <FileVersion>0.5.1</FileVersion>
+    <Version>0.5.1</Version>
   </PropertyGroup>
   <ItemGroup>
     <SupportedPlatform Include="browser" />
