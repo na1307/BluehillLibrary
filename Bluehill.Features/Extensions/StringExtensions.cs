@@ -1,9 +1,6 @@
 ﻿namespace Bluehill;
 
-/// <summary>
-/// 확장 메서드 모음
-/// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("", "IDE0057")]
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0057:범위 연산자 사용")]
 public static class StringExtensions {
     /// <summary>
     /// <paramref name="source"/> 문자열에서 왼쪽으로 <paramref name="length"/>만큼의 문자열을 반환
@@ -21,34 +18,30 @@ public static class StringExtensions {
     /// <returns><paramref name="source"/>에서 <paramref name="length"/>만큼 자른 문자열</returns>
     public static string Right(this string source, int length) => source.Substring(source.Length - length);
 
-    /// <summary>
-    /// <paramref name="source"/> 문자열에서 <paramref name="sub"/> 문자열이 몇번 반복되는지 반환
-    /// </summary>
-    /// <param name="source">원본 문자열</param>
-    /// <param name="sub">찾을 문자열</param>
-    /// <returns><paramref name="source"/>에서 <paramref name="sub"/>가 반복되는 횟수</returns>
-    public static int Repeats(this string source, string sub) => source.Split([sub], StringSplitOptions.None).Length - 1;
+    public static int Appears(this string source, string sub) => source.Split([sub], StringSplitOptions.None).Length - 1;
 
-#nullable disable
-    /// <summary>
-    /// 하나의 문자열로 합침
-    /// </summary>
-    /// <param name="strings"><see cref="IEnumerable{string}"/></param>
-    /// <returns>합쳐진 문자열</returns>
-    public static string ToJoinedString(this IEnumerable<string> strings) => ToJoinedString(strings, null);
+    public static string Piece(this string source, char delimiter, int position) => source.Piece(delimiter, position, int.MaxValue);
 
-    /// <summary>
-    /// 하나의 문자열로 합침
-    /// </summary>
-    /// <param name="strings"><see cref="IEnumerable{string}"/></param>
-    /// <param name="separator">구분자</param>
-    /// <returns>합쳐진 문자열</returns>
-    public static string ToJoinedString(this IEnumerable<string> strings, string separator) => string.Join(separator,
-#if !NETFRAMEWORK || NET40_OR_GREATER
-        strings
-#else
-        new List<string>(strings).ToArray()
-#endif
-        );
-#nullable restore
+    public static string Piece(this string source, string delimiter, int position) => source.Piece(delimiter, position, int.MaxValue);
+
+    public static string Piece(this string source, char delimiter, int position, int limit) => source.Piece(delimiter, position, limit, StringSplitOptions.None);
+
+    public static string Piece(this string source, string delimiter, int position, int limit) => source.Piece(delimiter, position, limit, StringSplitOptions.None);
+
+    public static string Piece(this string source, char delimiter, int position, int limit, StringSplitOptions options) {
+        var strings = source.Split([delimiter], limit, options);
+
+        return position >= 0 ? strings[position] : strings[strings.Length + position];
+    }
+
+    public static string Piece(this string source, string delimiter, int position, int limit, StringSplitOptions options) {
+        var strings = source.Split([delimiter], limit, options);
+
+        return position >= 0 ? strings[position] : strings[strings.Length + position];
+    }
+
+    public static string JoinStrings(this IEnumerable<string?> strings) => strings.JoinStrings(null);
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S3220:Method calls should not resolve ambiguously to overloads with \"params\"")]
+    public static string JoinStrings(this IEnumerable<string?> strings, string? separator) => string.Join(separator, [.. strings]);
 }

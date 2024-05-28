@@ -3,6 +3,8 @@
 namespace Bluehill;
 
 public static class AssemblyProperties {
+    private static readonly Assembly? entryAssembly = Assembly.GetEntryAssembly();
+
     public static string AssemblyTitle {
         get {
             var attribute = GetAttribute<AssemblyTitleAttribute>();
@@ -66,5 +68,5 @@ public static class AssemblyProperties {
         }
     }
 
-    private static T? GetAttribute<T>() where T : Attribute => (T?)Attribute.GetCustomAttribute(Assembly.GetEntryAssembly()!, typeof(T));
+    private static T? GetAttribute<T>() where T : Attribute => (T?)Attribute.GetCustomAttribute(entryAssembly!, typeof(T));
 }
