@@ -1,0 +1,6 @@
+<Project>
+  <ItemGroup>
+    <Using Include="Bluehill.Forms" />
+    <Using Include="Bluehill.Forms.ErrDialog" Static="true" />
+  </ItemGroup>
+</Project>

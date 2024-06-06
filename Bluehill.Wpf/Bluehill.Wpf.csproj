@@ -4,6 +4,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="Bluehill.Wpf.props" Pack="true" PackagePath="build\" />
+  </ItemGroup>
+  <ItemGroup>
     <Using Include="System.Windows" />
   </ItemGroup>
 </Project>

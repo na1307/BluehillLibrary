@@ -3,4 +3,7 @@
     <TargetFrameworks>net20;net40;net6.0</TargetFrameworks>
     <RootNamespace>Bluehill</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="Bluehill.Features.props" Pack="true" PackagePath="build\" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,6 @@
+<Project>
+  <ItemGroup>
+    <Using Include="Bluehill.Wpf" />
+    <Using Include="Bluehill.Wpf.ErrDialog" Static="true" />
+  </ItemGroup>
+</Project>

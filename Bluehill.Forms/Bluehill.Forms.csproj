@@ -1,9 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFrameworks>net20;net40;net6.0-windows;</TargetFrameworks>
+    <TargetFrameworks>net20;net40;net6.0-windows</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bluehill.Features\Bluehill.Features.csproj" />
+    <None Include="Bluehill.Forms.props" Pack="true" PackagePath="build\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bluehill.Features\Bluehill.Features.csproj" PrivateAssets="none" />
   </ItemGroup>
 </Project>
