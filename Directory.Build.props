@@ -6,5 +6,6 @@
     <Version>0.7</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/na1307/BluehillLibrary</RepositoryUrl>
+    <NoWarn>$(NoWarn);BH0001</NoWarn>
   </PropertyGroup>
 </Project>
