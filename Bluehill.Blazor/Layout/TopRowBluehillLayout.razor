@@ -1,0 +1,24 @@
+﻿@inherits LayoutComponentBase
+
+<BluehillLayout Body="@Body">
+    <TopRow>
+        <div class="top-row px-4">
+            @BeforeHeadLinks
+            @foreach (var link in HeadLinks) {
+                <NavLink href="@link.Path">@link.Text</NavLink>
+            }
+            @AfterHeadLinks
+        </div>
+    </TopRow>
+</BluehillLayout>
+
+@code {
+    [Parameter]
+    public RenderFragment? BeforeHeadLinks { get; set; }
+
+    [Parameter]
+    public IEnumerable<HeadLink> HeadLinks { get; set; } = Array.Empty<HeadLink>();
+
+    [Parameter]
+    public RenderFragment? AfterHeadLinks { get; set; }
+}
