@@ -2,8 +2,8 @@
   <PropertyGroup>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <AssemblyVersion>0</AssemblyVersion>
-    <FileVersion>0.8.1</FileVersion>
-    <Version>0.8.1</Version>
+    <FileVersion>0.8.2</FileVersion>
+    <Version>0.8.2</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/na1307/BluehillLibrary</RepositoryUrl>
     <NoWarn>$(NoWarn);BH0001</NoWarn>
