@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bluehill.Blazor", "Bluehill
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bluehill.Blazor.Culture.WebAssembly", "Bluehill.Blazor.Culture.WebAssembly\Bluehill.Blazor.Culture.WebAssembly.csproj", "{86072595-9AE6-4A95-AB97-2F74BD8D7958}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bluehill.Blazor.GHPage", "Bluehill.Blazor.GHPage\Bluehill.Blazor.GHPage.csproj", "{46B09B5B-FBFF-4B8C-8380-E0869ECC9FD7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{86072595-9AE6-4A95-AB97-2F74BD8D7958}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86072595-9AE6-4A95-AB97-2F74BD8D7958}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86072595-9AE6-4A95-AB97-2F74BD8D7958}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46B09B5B-FBFF-4B8C-8380-E0869ECC9FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46B09B5B-FBFF-4B8C-8380-E0869ECC9FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46B09B5B-FBFF-4B8C-8380-E0869ECC9FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46B09B5B-FBFF-4B8C-8380-E0869ECC9FD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
