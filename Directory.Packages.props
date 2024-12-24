@@ -9,6 +9,6 @@
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.11" />
   </ItemGroup>
   <ItemGroup>
-    <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.7" />
+    <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.8" />
   </ItemGroup>
 </Project>
