@@ -10,4 +10,7 @@
     <Using Remove="System.Net.Http" />
     <Using Remove="System.Threading.Tasks" />
   </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Remove="System.CLSCompliantAttribute" />
+  </ItemGroup>
 </Project>

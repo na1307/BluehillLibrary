@@ -9,6 +9,8 @@ public partial class LocalizableDialog : Form {
     }
 
     protected virtual void OK_Button_Click(object sender, EventArgs e) => DialogResult = DialogResult.OK;
+
     protected virtual void Cancel_Button_Click(object sender, EventArgs e) => DialogResult = DialogResult.Cancel;
+
     protected void HideOKButton() => okButton.Hide();
 }

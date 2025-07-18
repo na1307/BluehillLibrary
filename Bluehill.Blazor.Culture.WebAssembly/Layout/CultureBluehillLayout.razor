@@ -1,16 +1,10 @@
 ﻿@inherits LayoutComponentBase
 
-<TopRowBluehillLayout HeadLinks="@HeadLinks">
+<TopRowBluehillLayout HeadLinks="@HeadLinks" AfterHeadLinks="@AfterHeadLinks" Body="@Body">
     <BeforeHeadLinks>
         <CultureSelector/>
         @BeforeHeadLinks
     </BeforeHeadLinks>
-    <Body>
-        @Body
-    </Body>
-    <AfterHeadLinks>
-        @AfterHeadLinks
-    </AfterHeadLinks>
 </TopRowBluehillLayout>
 
 @code {

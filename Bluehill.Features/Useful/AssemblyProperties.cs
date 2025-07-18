@@ -3,7 +3,7 @@
 namespace Bluehill;
 
 public static class AssemblyProperties {
-    private static readonly Assembly? entryAssembly = Assembly.GetEntryAssembly();
+    private static readonly Assembly? EntryAssembly = Assembly.GetEntryAssembly();
 
     public static string AssemblyTitle {
         get {
@@ -16,6 +16,7 @@ public static class AssemblyProperties {
     public static string VersionNumber {
         get {
             var attribute = GetAttribute<AssemblyFileVersionAttribute>();
+#pragma warning disable SA1110 // Opening parenthesis or bracket should be on declaration line
             var version =
 #if !NETFRAMEWORK || NET40_OR_GREATER
                 Version.Parse
@@ -23,6 +24,7 @@ public static class AssemblyProperties {
                 new Version
 #endif
                 (attribute != null ? attribute.Version : GetAttribute<AssemblyVersionAttribute>()!.Version);
+#pragma warning restore SA1110 // Opening parenthesis or bracket should be on declaration line
 
             return version.ToString(2) + (version.Build == 0 ? string.Empty : "." + version.Build.ToString());
         }
@@ -68,5 +70,5 @@ public static class AssemblyProperties {
         }
     }
 
-    private static T? GetAttribute<T>() where T : Attribute => (T?)Attribute.GetCustomAttribute(entryAssembly!, typeof(T));
+    private static T? GetAttribute<T>() where T : Attribute => (T?)Attribute.GetCustomAttribute(EntryAssembly!, typeof(T));
 }

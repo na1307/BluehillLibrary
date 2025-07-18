@@ -10,11 +10,15 @@ public class SortableBindingList<T> : BindingList<T> {
     private PropertyDescriptor? sortPropertyValue;
 
     public SortableBindingList() { }
+
     public SortableBindingList(IList<T> list) : base(list) { }
 
     protected override PropertyDescriptor? SortPropertyCore => sortPropertyValue;
+
     protected override ListSortDirection SortDirectionCore => sortDirectionValue;
+
     protected override bool SupportsSortingCore => true;
+
     protected override bool IsSortedCore => isSortedValue;
 
     protected override void ApplySortCore(PropertyDescriptor prop, ListSortDirection direction) {
@@ -36,7 +40,7 @@ public class SortableBindingList<T> : BindingList<T> {
 
             query = direction == ListSortDirection.Ascending
                 ? query.OrderBy(i => prop.GetValue(i))
-                : (IEnumerable<T>)query.OrderByDescending(i => prop.GetValue(i));
+                : query.OrderByDescending(i => prop.GetValue(i));
 
             var newIndex = 0;
 
@@ -46,7 +50,7 @@ public class SortableBindingList<T> : BindingList<T> {
             }
 
             isSortedValue = true;
-            OnListChanged(new ListChangedEventArgs(ListChangedType.Reset, -1));
+            OnListChanged(new(ListChangedType.Reset, -1));
         } else {
             throw new NotSupportedException($"Cannot sort by {prop.Name}. This {prop.PropertyType} does not implement IComparable");
         }
