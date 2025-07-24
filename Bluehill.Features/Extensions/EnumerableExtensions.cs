@@ -1,7 +1,7 @@
 ﻿#if NET45_OR_GREATER || NETCOREAPP1_0_OR_GREATER
 using System.Threading.Tasks;
-#endif
 
+#endif
 namespace Bluehill;
 
 public static class EnumerableExtensions {
