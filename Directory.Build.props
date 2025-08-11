@@ -2,11 +2,11 @@
   <PropertyGroup>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <AssemblyVersion>0</AssemblyVersion>
-    <FileVersion>0.11.0</FileVersion>
-    <Version>0.11.0</Version>
+    <FileVersion>0.12.0</FileVersion>
+    <Version>0.12.0</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/na1307/BluehillLibrary</RepositoryUrl>
-    <NoWarn>$(NoWarn);BH0001</NoWarn>
+    <NoWarn>$(NoWarn);BH0001;SA1600</NoWarn>
     <StaticWebAssetBasePath Condition="$(StaticWebAssetBasePath) == ''">/</StaticWebAssetBasePath>
   </PropertyGroup>
 </Project>

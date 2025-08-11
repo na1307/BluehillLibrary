@@ -23,10 +23,10 @@ public static class AssemblyProperties {
 #else
                 new Version
 #endif
-                (attribute != null ? attribute.Version : GetAttribute<AssemblyVersionAttribute>()!.Version);
+                (attribute?.Version ?? GetAttribute<AssemblyVersionAttribute>()!.Version);
 #pragma warning restore SA1110 // Opening parenthesis or bracket should be on declaration line
 
-            return version.ToString(2) + (version.Build == 0 ? string.Empty : "." + version.Build.ToString());
+            return version.ToString(2) + (version.Build == 0 ? string.Empty : $".{version.Build}");
         }
     }
 
@@ -34,7 +34,7 @@ public static class AssemblyProperties {
         get {
             var attribute = GetAttribute<AssemblyInformationalVersionAttribute>();
 
-            return attribute != null ? attribute.InformationalVersion : VersionNumber;
+            return attribute?.InformationalVersion ?? VersionNumber;
         }
     }
 
@@ -42,7 +42,7 @@ public static class AssemblyProperties {
         get {
             var attribute = GetAttribute<AssemblyDescriptionAttribute>();
 
-            return attribute != null ? attribute.Description : string.Empty;
+            return attribute?.Description ?? string.Empty;
         }
     }
 
@@ -50,7 +50,7 @@ public static class AssemblyProperties {
         get {
             var attribute = GetAttribute<AssemblyProductAttribute>();
 
-            return attribute != null ? attribute.Product : string.Empty;
+            return attribute?.Product ?? string.Empty;
         }
     }
 
@@ -58,7 +58,7 @@ public static class AssemblyProperties {
         get {
             var attribute = GetAttribute<AssemblyCopyrightAttribute>();
 
-            return attribute != null ? attribute.Copyright : string.Empty;
+            return attribute?.Copyright ?? string.Empty;
         }
     }
 
@@ -66,7 +66,7 @@ public static class AssemblyProperties {
         get {
             var attribute = GetAttribute<AssemblyCompanyAttribute>();
 
-            return attribute != null ? attribute.Company : string.Empty;
+            return attribute?.Company ?? string.Empty;
         }
     }
 
